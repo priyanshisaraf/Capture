@@ -33,7 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .catch(alert);
     });
-
+var cameraSensor=document.querySelector("#camera-sensor");
+var cameraOutput = document.querySelector("#camera-output")
 var photo=true;
 var video=false;
 function takeVideo(){
@@ -42,7 +43,16 @@ function takeVideo(){
 }
 function capture(){
     if(photo==true){
+        cameraSensor.width = vid.videoWidth;
+        cameraSensor.height = vid.videoHeight;
+        cameraSensor.getContext("2d").drawImage(vid, 0, 0);
+        const imageData = cameraSensor.toDataURL("image/webp");
 
+        // Store image in localStorage
+        localStorage.setItem('capturedImage', imageData);
+
+        // Redirect to gallery page
+        window.location.href = 'gallery.html';
     }
     else{
         
