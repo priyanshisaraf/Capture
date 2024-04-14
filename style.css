@@ -1,0 +1,138 @@
+.container{
+    display:grid;
+    grid-template-columns: 10vw 25vw 10vw 10vw 10vw auto 10vw ;
+    grid-template-rows: 85vh 7vh 8vh;
+    background-color: black;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+}
+#effects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3 ;
+    border: 0px;
+}
+#effects img:hover{
+    max-height: 95%;
+    max-width: 95%;
+    height: auto;
+    width: auto;
+}
+#capture img{
+    cursor: pointer;
+}
+#menu ul li{
+    padding: 15vh;
+    list-style: none;
+    display: inline;
+    width: 100vw;
+}
+
+#menu{
+    display: hidden;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    background-color: rgb(37, 36, 36); 
+    color: white;
+    z-index: 1; 
+    transition: 0.5s;
+    position: fixed;
+    bottom: 8.01vh;
+    height: 0;
+    overflow: hidden;
+}
+#video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    border: 1px solid ;
+    border-radius: 100px;
+}
+#video:hover{
+    cursor:pointer;
+    background-color:  rgb(37,37,37);
+}
+#capture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+
+}
+
+#photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    border: 1px solid ;
+    border-radius: 100px;
+}
+#photo:hover{
+    cursor:pointer;
+    background-color: rgb(37,37,37);
+}
+
+#gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 3;
+}
+#gallery img:hover {
+    max-height: 80%;
+    max-width: 80%;
+    height: auto;
+    width: auto;
+}
+
+
+#photo img, #video img, #gallery img{
+    max-height: 70%;
+    max-width: 70%;
+    height: auto;
+    width: auto;
+}
+#effects img{
+    max-height: 80%;
+    max-width: 80%;
+    height: auto;
+    width: auto;
+    cursor: pointer;
+}
+
+#capture img{
+    max-height: 90%;
+    max-width: 90%;
+    height: auto;
+    width: auto;
+}
+#capture img:hover{
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+#camera{
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: white;
+}
