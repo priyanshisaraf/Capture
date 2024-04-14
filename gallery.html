@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="galleryContainer"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Retrieve image from localStorage
+            const imageData = localStorage.getItem('capturedImage');
+
+            if (imageData) {
+                const img = document.createElement('img');
+                img.src = imageData;
+                document.getElementById('galleryContainer').appendChild(img);
+            }
+        });
+    </script>
+</body>
+</html>
